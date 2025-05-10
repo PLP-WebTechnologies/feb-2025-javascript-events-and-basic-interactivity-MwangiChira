@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling & Interactive Elements</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Added FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JavaScript Event Handling & Interactive Elements</h1>
+            <p>Explore the power of JavaScript events and create dynamic user experiences!</p>
+        </header>
+        <section id="event-handling">
+            <h2>1. Event Handling 🎈</h2>
+
+            <div>
+                <h3>Button Click</h3>
+                <button id="click-button">Click Me!</button>
+                <span id="click-count">0</span> clicks
+            </div>
+
+            <div>
+                <h3>Hover Effect</h3>
+                <div id="hover-box">Hover over me</div>
+            </div>
+
+            <div>
+                <h3>Keypress Detection</h3>
+                <input type="text" id="keypress-area" placeholder="Type something here...">
+                <div>Last key pressed: <span id="key-output">None</span></div>
+            </div>
+
+            <div>
+                <h3>Secret Action</h3>
+                <p>Try double-clicking the button below:</p>
+                <button id="secret-action-btn">Normal Button</button>
+            </div>
+
+            <div class="event-output" id="event-output">
+                Event actions will appear here...
+            </div>
+        </section>
+        <section id="interactive-elements">
+            <h2>2. Interactive Elements 🎮</h2>
+
+            <div>
+                <h3>Button Color/Text Change</h3>
+                <button id="text-change-btn">Click to Change</button>
+            </div>
+
+            <div>
+                <h3>Image Gallery</h3>
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <!-- local image source URLs -->
+                        <img src="images/img4.jpg" alt="Image 1">
+                        <img src="images/img2.jpg" alt="Image 2">
+                        <img src="images/img3.jpg" alt="Image 3">
+                    </div>
+                    <div class="gallery-nav">
+                        <button id="prev-btn">Previous</button>
+                        <button id="next-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Tabs</h3>
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab1">Tab 1</button>
+                        <button class="tab-button" data-tab="tab2">Tab 2</button>
+                        <button class="tab-button" data-tab="tab3">Tab 3</button>
+                    </div>
+                    <div class="tab-content active" id="tab1">
+                        <h4>Tab 1 Content</h4>
+                        <p>This is the content for the first tab. JavaScript makes switching between tabs easy and intuitive!</p>
+                    </div>
+                    <div class="tab-content" id="tab2">
+                        <h4>Tab 2 Content</h4>
+                        <p>Welcome to the second tab. Tabs are a great way to organize content without requiring page reloads.</p>
+                    </div>
+                    <div class="tab-content" id="tab3">
+                        <h4>Tab 3 Content</h4>
+                        <p>This is the third tab content. Using events and DOM manipulation, we can create this interactive interface.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="form-validation">
+            <h2>3. Form Validation 📋✅</h2>
+            <form id="validation-form">
+                <div class="form-control">
+                    <label for="username">Username (required)</label>
+                    <input type="text" id="username" placeholder="Enter username">
+                    <div class="error" id="username-error">Username is required</div>
+                </div>
+
+                <div class="form-control">
+                    <label for="email">Email (required)</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <div class="error" id="email-error">Please enter a valid email address</div>
+                </div>
+
+                <div class="form-control">
+                    <label for="password">Password (min 8 characters)</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                    <div class="error" id="password-error">Password must be at least 8 characters long</div>
+                </div>
+
+                <div class="form-control">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm password">
+                    <div class="error" id="confirm-password-error">Passwords do not match</div>
+                </div>
+
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+
+            <div class="success-message" id="success-message">
+                <i class="fas fa-check-circle"></i> Form submitted successfully!
+            </div>
+        </section>
+        <div id="secret-box">
+            <i class="fas fa-star"></i>
+        </div>
+
+        <div id="secret-modal">
+            <div class="modal-content">
+                <button class="close-button">&times;</button>
+                <h3>You Found the Secret! 🎉</h3>
+                <p>This is a hidden modal that appears when you long-press the secret button.</p>
+                <p>You've unlocked this bonus feature!</p>
+                <div id="confetti-container" style="margin-top: 20px;">
+                    <img src="/api/placeholder/400/200" alt="Celebration">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
